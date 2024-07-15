@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
+import WalletBalance from './components/WalletBalance';
+import ExpenseList from './components/ExpenseList';
+import ExpenseSummary from './components/ExpenseSummary';
+import AddExpenseModal from './components/AddExpenseModal';
+import { ExpenseProvider } from './context/ExpenseContext';
+import './index.css';
 
-function App() {
+const App = () => {
+  const [isExpenseModalOpen, setIsExpenseModalOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ExpenseProvider>
+      <div className="App">
+        <Navbar />
+        <WalletBalance />
+        <button className="add-expense" onClick={() => setIsExpenseModalOpen(true)}>+ Add Expense</button>
+        <AddExpenseModal
+          isOpen={isExpenseModalOpen}
+          onRequestClose={() => setIsExpenseModalOpen(false)}
+        />
+        <ExpenseList />
+        <ExpenseSummary />
+      </div>
+    </ExpenseProvider>
   );
-}
+};
 
 export default App;

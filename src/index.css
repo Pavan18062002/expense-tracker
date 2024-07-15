@@ -1,13 +1,169 @@
+/* Basic styling */
 body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Navbar styling */
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Main App container */
+.App {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* WalletBalance styling */
+.WalletBalance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+
+.WalletBalance h2 {
+  margin: 0;
+}
+
+.WalletBalance button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.WalletBalance button:hover {
+  background-color: #218838;
+}
+
+/* Add Expense Button */
+button.add-expense {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.add-expense:hover {
+  background-color: #c82333;
+}
+
+/* Expense List styling */
+.ExpenseList {
+  margin-bottom: 2rem;
+}
+
+.ExpenseList h2 {
+  margin-bottom: 1rem;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.expense-item span {
+  margin-right: 1rem;
+}
+
+.expense-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.expense-item button:hover {
+  color: #0056b3;
+}
+
+/* Expense Summary styling */
+.ExpenseSummary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.PieChart, .BarChart {
+  flex: 1;
+  margin: 1rem;
+}
+
+.PieChart {
+  width: 50%;
+  height: 300px;
+}
+
+.BarChart {
+  width: 50%;
+  height: 300px;
+}
+
+/* Modal styling */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+}
+
+.ReactModal__Content {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.ReactModal__Content h2 {
+  margin-top: 0;
+}
+
+.ReactModal__Content input {
+  width: calc(100% - 2rem);
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.ReactModal__Content button {
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ReactModal__Content button.add {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.ReactModal__Content button.cancel {
+  background-color: #dc3545;
+  color: #fff;
 }
